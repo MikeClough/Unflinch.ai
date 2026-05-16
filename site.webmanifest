@@ -1,0 +1,15 @@
+{
+  "name": "Unflinch.ai",
+  "short_name": "Unflinch.ai",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#030509",
+  "theme_color": "#04070c",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

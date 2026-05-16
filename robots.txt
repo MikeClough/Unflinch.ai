@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /gpt/
+
+Sitemap: https://unflinch.ai/sitemap.xml
