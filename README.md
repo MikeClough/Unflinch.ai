@@ -1,27 +1,20 @@
-# Unflinch.ai landing page — Think Tank v14
+# Unflinch.ai
 
-Fix over v13:
-- Confirmed the homepage CTA now uses the absolute URL `https://unflinch.ai/gpt/`.
-- Removed the remaining relative `href="/gpt/"` on the homepage.
-- Local file previews should no longer show `file:///C:/gpt/` on hover/click.
-- The deployed path still redirects through `/gpt/index.html` to the correct ChatGPT GPT link.
+[Unflinch.ai](https://unflinch.ai/) is a truth-first AI assistant by AEGIS, built for serious reasoning, prompt hardening, plan review, creative direction, research planning, and analytical work.
 
-GPT link included in `/gpt/index.html`:
+Use it here:
 
-https://chatgpt.com/g/g-6998f56247748191a8588fb5560987d8-aegis
+https://unflinch.ai/
 
-## Setup
+Direct GPT launch path:
 
-Upload all files and folders to a public GitHub repository, then enable GitHub Pages with custom domain `unflinch.ai`.
+https://unflinch.ai/gpt/
 
-Files included:
-- `index.html`
-- `CNAME`
-- `robots.txt`
-- `sitemap.xml`
-- `favicon.svg`
-- `site.webmanifest`
-- `og-image.png`
-- `404.html`
-- `gpt/index.html`
-- `README.md`
+## What it is for
+
+- Challenge weak assumptions before you trust a plan.
+- Harden prompts and instructions so they are harder to misread.
+- Stress-test arguments, claims, and decisions.
+- Help with high-signal writing, research, strategy, and review.
+
+Built by AEGIS.
