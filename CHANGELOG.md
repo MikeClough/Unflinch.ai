@@ -1,6 +1,9 @@
-# Unflinch.ai Landing Page v13
+# Unflinch.ai Landing Page v16
 
-Support link iteration:
-- Connected milestone support buttons to Ko-fi: https://ko-fi.com/unflinch
-- Updated support note to explain that supporters should name the target AEGIS area in the Ko-fi message box.
-- Kept the 50/50 support split wording visible before users click through.
+Support/roadmap simplification:
+- Removed duplicate support-area card grid.
+- Kept one clean support button.
+- Support section now asks users to name a target in the Ko-fi message.
+- Renamed Roadmap to Funding Targets to avoid implying strict order.
+- Funding targets explain the workstreams directly.
+- Added note that targets are public workstreams, not a fixed sequence.

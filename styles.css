@@ -519,3 +519,136 @@ header{
 .support-note strong{
   color:var(--text);
 }
+
+
+/* v14 support targeting clarity */
+.support-process{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  padding:18px;
+  margin:-2px 0 18px;
+}
+.support-process div{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.support-process span{
+  display:inline-grid;
+  place-items:center;
+  width:34px;
+  height:34px;
+  flex:0 0 auto;
+  border-radius:999px;
+  background:rgba(117,243,255,.10);
+  border:1px solid rgba(117,243,255,.22);
+  color:var(--cyan);
+  font-family:var(--font-tech);
+  font-weight:800;
+}
+.support-process p{
+  margin:0;
+  color:var(--soft);
+}
+.fund-instruction{
+  margin:16px 0 18px;
+  padding:12px 13px;
+  border-radius:16px;
+  background:rgba(117,243,255,.075);
+  border:1px solid rgba(117,243,255,.16);
+  color:var(--soft);
+  font-size:14px;
+  line-height:1.35;
+}
+.fund-instruction strong,
+.support-note strong{
+  color:var(--text);
+}
+@media(max-width:720px){
+  .support-process{grid-template-columns:1fr}
+}
+
+
+/* v15 simplified one-button support */
+.support-focus{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;
+  gap:24px;
+  padding:28px;
+  margin-bottom:18px;
+}
+.support-focus h3{
+  margin:8px 0 10px;
+  font-family:var(--font-display);
+  font-size:clamp(28px,3vw,44px);
+  letter-spacing:-.055em;
+  line-height:.98;
+}
+.support-focus p{
+  margin:0;
+  max-width:760px;
+  color:var(--muted);
+  line-height:1.65;
+}
+.support-main-btn{
+  white-space:nowrap;
+  min-width:220px;
+  justify-content:center;
+}
+.fund-list{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+.fund-pill{
+  padding:20px;
+  min-height:150px;
+}
+.fund-pill span{
+  display:inline-block;
+  margin-bottom:10px;
+  font-family:var(--font-tech);
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.07em;
+  color:var(--cyan);
+  text-transform:uppercase;
+}
+.fund-pill p{
+  margin:0;
+  color:var(--muted);
+  line-height:1.55;
+}
+@media(max-width:980px){
+  .support-focus{
+    grid-template-columns:1fr;
+  }
+  .support-main-btn{
+    width:100%;
+  }
+  .fund-list{
+    grid-template-columns:1fr 1fr;
+  }
+}
+@media(max-width:720px){
+  .fund-list{
+    grid-template-columns:1fr;
+  }
+}
+
+
+/* v16 streamlined support/funding targets */
+.target-callout{
+  margin-top:12px;
+  color:var(--cyan);
+  font-family:var(--font-tech);
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.04em;
+  text-transform:uppercase;
+}
+.fund-list{
+  display:none !important;
+}
