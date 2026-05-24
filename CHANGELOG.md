@@ -1,9 +1,7 @@
-# Unflinch.ai Landing Page v16
+# Unflinch.ai Landing Page v31
 
-Support/roadmap simplification:
-- Removed duplicate support-area card grid.
-- Kept one clean support button.
-- Support section now asks users to name a target in the Ko-fi message.
-- Renamed Roadmap to Funding Targets to avoid implying strict order.
-- Funding targets explain the workstreams directly.
-- Added note that targets are public workstreams, not a fixed sequence.
+Local test search fix:
+- Removed noopener from the temporary search tab so the script can redirect it after the Worker returns.
+- Added a loading message inside the new tab while AEGIS prepares the Google query.
+- Keeps fallback behavior if the Worker fails.
+- Note: for local file:// testing, the Worker also needs CORS to allow Origin: null, or the site should be tested through Cloudflare Pages.

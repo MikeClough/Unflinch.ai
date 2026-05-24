@@ -6,21 +6,45 @@
   <title>Unflinch.ai — AEGIS</title>
   <meta name="description" content="Unflinch.ai is the public gateway to AEGIS: a truth-first AI assistant for serious work, visual judgment, backend-safe experimentation, and evidence-led learning." />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="assets/unflinch-aegis-logo.png">
+  <link rel="apple-touch-icon" href="assets/unflinch-aegis-logo.png">
 </head>
 <body>
   <div class="site-bg" aria-hidden="true"></div>
 
-  <header>
-    <div class="wrap nav">
+  <header class="topbar">
+    <div class="wrap topbar-inner">
       <a class="brand" href="#top" aria-label="Unflinch.ai home">
-        <div class="logo">U</div>
+        <img class="site-logo-img" src="assets/unflinch-aegis-logo.png" alt="" aria-hidden="true">
         <span>Unflinch.ai</span>
       </a>
-      <nav class="navlinks" aria-label="Primary navigation">
-        <a href="#mission">Mission</a>
-        <a href="#method">Method</a><a href="#support">Support</a>
-        <a href="#roadmap">Funding Targets</a>
-        <a href="/gpt">Launch GPT</a>
+
+      <form class="top-search" id="aegisTopSearch" aria-label="AEGIS Search Bridge" onsubmit="return window.aegisHandleSearch ? window.aegisHandleSearch(event) : false;">
+        <span class="search-status live">Beta</span>
+        <input name="q" type="search" placeholder="Ask AEGIS to sharpen and open a Google search..." autocomplete="off">
+        <button type="submit">Search</button>
+      </form>
+      <div class="top-search-result" id="aegisSearchResult" hidden>
+        <div>
+          <span>AEGIS query</span>
+          <p id="aegisSearchQuery"></p>
+          <small id="aegisSearchReason"></small>
+        </div>
+        <a id="aegisSearchOpen" href="#" target="_blank" rel="noopener">Open Google</a>
+      </div>
+
+      <div class="neuron-meter" title="Preview counter for future AI-assisted search rewrites">
+        <div class="meter-orb" aria-hidden="true"></div>
+        <div class="meter-copy">
+          <div class="meter-label">AI Search Pool</div>
+          <div class="meter-value"><strong id="neuronValue">10,000</strong><span>neurons</span></div>
+          <div class="meter-track" aria-hidden="true"><span id="neuronTrack" style="width:100%"></span></div>
+        </div>
+      </div>
+
+      <nav class="top-actions" aria-label="Primary">
+        <a href="#support" class="support-link">Support</a>
+        <a href="https://chatgpt.com/g/g-673a22f5b056819180480a61780df45d-aegis" target="_blank" rel="noopener" class="gpt-link">Open GPT</a>
       </nav>
     </div>
   </header>
@@ -32,70 +56,86 @@
         <h1><span>An AI that doesn’t flinch</span> when the question gets harder.</h1>
         <p class="lead">Unflinch.ai is the public gateway to AEGIS: a careful, governed intelligence system for serious work, strict constraints, visual judgment, backend-safe experimentation, and long-term learning through evidence.</p>
         <div class="actions">
-          <a class="btn primary" href="/gpt">Launch Unflinch.ai</a>
+          <a class="btn primary" href="/gpt">Launch in ChatGPT</a>
           <a class="btn support" href="#support">Support AEGIS</a>
           <a class="btn" href="#roadmap">View roadmap</a>
         </div>
         <p class="note">AEGIS is intentionally more careful than ordinary instant-chat behavior. It may slow down when correctness, traps, files, safety boundaries, or unsupported certainty matter.</p>
-        <div class="proof-strip" aria-label="AEGIS strengths">
-          <span>Constraint-aware</span>
-          <span>Artifact-safe</span>
-          <span>Visual-ready</span>
-          <span>Backend-minded</span>
-        </div>
       </div>
     </section>
 
-    <section id="mission">
+    <section id="project-map" class="project-map-section">
       <div class="wrap">
         <div class="section-head">
-          <div class="kicker">Mission profile</div>
-          <h2>A sharper assistant for people who need reality, not reassurance.</h2>
-          <p>AEGIS is being shaped as a high-trust AI layer: useful for prompt hardening, red-team review, visual critique, planning, file generation, strict-format work, and eventually controlled backend and embodiment experiments.</p>
+          <div class="kicker">Project map</div>
+          <h2>What Unflinch.ai is building.</h2>
+          <p>AEGIS is not one feature. It is a public assistant, a search layer, guide-file capabilities, and private backend research that becomes public only when it is safe enough.</p>
         </div>
-        <div class="feature-grid">
-          <article class="panel feature">
-            <b>◇</b>
-            <h3>Truth-first review</h3>
-            <p>Plans, claims, prompts, images, specs, and documents get checked against evidence and constraints instead of polished into false confidence.</p>
-          </article>
-          <article class="panel feature">
-            <b>⌁</b>
-            <h3>Trap-resistant output</h3>
-            <p>AEGIS notices exact-format contracts, ambiguity, hidden assumptions, missing verification, and cases where speed would make the answer worse.</p>
-          </article>
-          <article class="panel feature">
-            <b>⬡</b>
-            <h3>Learning architecture</h3>
-            <p>The public assistant is one surface. The roadmap grows toward API tests, guide compilers, companion systems, and evidence-rich learning loops.</p>
-          </article>
-        </div>
-      </div>
-    </section>
 
+        <div class="project-grid compact-project-grid">
+          <article class="project-card panel live">
+            <div class="project-card-head">
+              <div class="kicker">Live / free</div>
+              <span>GPT</span>
+            </div>
+            <h3>AEGIS custom GPT</h3>
+            <p class="project-short">Truth-first AI assistant.</p>
+            <details>
+              <summary>Read more</summary>
+              <p>The main public AEGIS experience: careful reasoning, strict constraints, visual judgment, file-aware work, and safer long-form collaboration.</p>
+            </details>
+          </article>
 
-    <section id="method" class="method-section">
-      <div class="wrap">
-        <div class="section-head">
-          <div class="kicker">Operating method</div>
-          <h2>Slower when guessing would be expensive. Faster when the path is clear.</h2>
-          <p>AEGIS is designed around a layered workflow: understand the request, identify the target, apply only the needed context, and escalate when confidence drops.</p>
-        </div>
-        <div class="method-grid">
-          <article class="method-card panel">
-            <span>01</span>
-            <h3>Resolve meaning</h3>
-            <p>Clarify target, scope, and version before acting when a wrong guess would waste time or damage an artifact.</p>
+          <article class="project-card panel planned">
+            <div class="project-card-head">
+              <div class="kicker">Planned site feature</div>
+              <span>Search</span>
+            </div>
+            <h3>AEGIS Search Bridge</h3>
+            <p class="project-short">Search bar in the top rail, coming soon.</p>
+            <details>
+              <summary>Read more</summary>
+              <p>A site search tool that helps turn long AI-style searches into sharper Google queries, known-source lookups, and optional AI-assisted rewrites. It is not the main AEGIS assistant.</p>
+            </details>
           </article>
-          <article class="method-card panel">
-            <span>02</span>
-            <h3>Use compact context</h3>
-            <p>Prefer runtime cards, summaries, and relevant chunks over dragging the whole conversation into every decision.</p>
+
+          <article class="project-card panel guide">
+            <div class="project-card-head">
+              <div class="kicker">Guide-file branch</div>
+              <span>Music</span>
+            </div>
+            <h3>SongScan</h3>
+            <p class="project-short">Find and analyse songs from loose memory.</p>
+            <details>
+              <summary>Read more</summary>
+              <p>A guide-file capability for music identification and song analysis workflows: describing songs from partial memory, handling slightly wrong details, and preparing audio-derived filesets when available.</p>
+            </details>
           </article>
-          <article class="method-card panel">
-            <span>03</span>
-            <h3>Escalate deliberately</h3>
-            <p>Local/backend layers handle simple work; stronger API models are reserved for hard reasoning, visual analysis, and stuck states.</p>
+
+          <article class="project-card panel guarded">
+            <div class="project-card-head">
+              <div class="kicker">Private testing</div>
+              <span>Backend</span>
+            </div>
+            <h3>Backend + extension</h3>
+            <p class="project-short">Approval-gated automation research.</p>
+            <details>
+              <summary>Read more</summary>
+              <p>Experimental browser-extension and backend work for local files, API-mode automation, action approval, training loops, and controlled tool use. It is not public or considered safe yet. Future public versions should remain free, with advanced features requiring the user’s own API account.</p>
+            </details>
+          </article>
+
+          <article class="project-card panel embodied">
+            <div class="project-card-head">
+              <div class="kicker">Research branch</div>
+              <span>Deployment</span>
+            </div>
+            <h3>Deployment + embodiment</h3>
+            <p class="project-short">Controlled agent/runtime experiments.</p>
+            <details>
+              <summary>Read more</summary>
+              <p>A separate branch for simulated embodiment, device/agent handoff patterns, runtime safety, and approval-gated operation. This depends on the backend safety layer and remains private until it can be tested safely.</p>
+            </details>
           </article>
         </div>
       </div>
@@ -105,15 +145,15 @@
       <div class="wrap">
         <div class="section-head support-head">
           <div class="kicker">Support AEGIS</div>
-          <h2>Choose the AEGIS milestone you want to accelerate.</h2>
-          <p>AEGIS is free to use. Optional support is split 50/50: half goes to the AEGIS area you choose, and half goes to the Core AEGIS Development Fund for public AEGIS work.</p>
+          <h2>Optional support is split 50/50.</h2>
+          <p>AEGIS is free to use. Support lets you help a specific public AEGIS workstream while also funding the core development work that keeps the project moving.</p>
         </div>
 
         <div class="support-split panel">
           <div>
             <span class="split-number">50%</span>
             <h3>Selected Fund</h3>
-            <p>Reserved for the support area you choose, such as AI Search capacity, visual training, speed/routing, backend safety, or broader benchmark testing.</p>
+            <p>Reserved for the AEGIS workstream you name in the Ko-fi message, such as Search Bridge, Visual Training, Speed/Routing, Backend Safety, Benchmarks, or another public AEGIS target.</p>
           </div>
           <div>
             <span class="split-number">50%</span>
@@ -122,23 +162,13 @@
           </div>
         </div>
 
-        <div class="support-process panel">
-          <div><span>1</span><p>Pick a target below.</p></div>
-          <div><span>2</span><p>Click the support button.</p></div>
-          <div><span>3</span><p>Name it in Ko-fi.</p></div>
-        </div>
-
         <div class="support-focus panel">
           <div>
-            <div class="kicker">One support link</div>
-            <h3>Support public AEGIS development.</h3>
-            <p>All support currently goes through one Ko-fi page. If you want your support aimed at a particular funding target, write the target name in the Ko-fi message box. The targets are listed below.</p>
+            <div class="kicker">Choose what to accelerate</div>
+            <h3>Support what you want AEGIS to build faster.</h3>
+            <p>Click through to Ko-fi. If you want to target support, write the workstream name in the message box. If no target is named, support is treated as Core AEGIS.</p>
           </div>
           <a class="btn support support-main-btn" href="https://ko-fi.com/unflinch" target="_blank" rel="noopener">Support Unflinch / AEGIS</a>
-        </div>
-
-        <div class="panel support-note">
-          In the Ko-fi message box, write the funding target you want to support, such as <strong>Search Bridge</strong>, <strong>Visual Training</strong>, <strong>Speed/Routing</strong>, <strong>Backend Safety</strong>, <strong>Benchmarks</strong>, or <strong>Core AEGIS</strong>. If no target is named, support is treated as Core AEGIS. AEGIS files remain free.
         </div>
       </div>
     </section>
@@ -148,16 +178,17 @@
         <div class="section-head">
           <div class="kicker">Roadmap</div>
           <h2>From careful chat to tested intelligence.</h2>
-          <p>The path is staged. Visual systems first, then speed and routing, then backend safety, then broad everyday-work benchmarks, then heavier embodiment and game-learning research.</p>
+          <p></p>
         </div>
 
         <div class="roadmap">
-          <article class="panel road"><div><div class="kicker">Funding target</div><h3>AEGIS Search Bridge</h3><p>A hosted search layer that turns long AI-style searches into sharper Google queries, known-source lookups, and future AI-assisted rewrite capacity.</p></div><div class="budget"><strong>Lean</strong><span>free/low-cost beta</span></div></article>
-          <article class="panel road"><div><div class="kicker">Funding target</div><h3>Image generation + visual judgment training</h3><p>API-backed training runs for image prompts, edit specs, visual judgment, mismatch detection, identity/style boundaries, and critique calibration.</p></div><div class="budget"><strong>~$10k</strong><span>first major target</span></div></article>
-          <article class="panel road"><div><div class="kicker">Funding target</div><h3>Speed, routing + compact AEGIS cards</h3><p>Distill large guide files into compact runtime cards, test model-effort settings, and reduce unnecessary slowness without losing AEGIS discipline.</p></div><div class="budget"><strong>~$10k</strong><span>latency + cost work</span></div></article>
-          <article class="panel road"><div><div class="kicker">Funding target</div><h3>Companion backend safety harness</h3><p>Formalize manual-mode boundaries, approval gates, action/result schemas, logs, replay tests, and a safe path toward future API automation.</p></div><div class="budget"><strong>~$10k–$15k</strong><span>runtime foundation</span></div></article>
-          <article class="panel road"><div><div class="kicker">Funding target</div><h3>Broad everyday-work benchmark</h3><p>Evaluate AEGIS across documents, PDFs, spreadsheets, plans, specs, critique, research framing, strict-output tasks, and reliable file delivery.</p></div><div class="budget"><strong>~$15k–$25k</strong><span>ordinary-user lift</span></div></article>
-          <article class="panel road"><div><div class="kicker">Experimental branch</div><h3>Game-learning and simulated environments</h3><p>Optional creator-led research using games as repeatable environments for observation, rule discovery, context compression, uncertainty handling, and backend decision-making.</p></div><div class="budget"><strong>Flexible</strong><span>core fund / later support</span></div></article>
+          <article class="panel road"><div><div class="kicker">Funding target</div><h3>AEGIS Search Bridge</h3><p>Name this “Search Bridge” to support the hosted search layer: sharper Google queries, known-source lookups, and future AI-assisted rewrite capacity.</p></div><div class="budget"><strong>Lean</strong><span>free/low-cost beta</span></div></article>
+          <article class="panel road"><div><div class="kicker">Funding target</div><h3>Image Generation</h3><p>Name this “Image Generation” or “Visual Training” to support API-backed image prompts, edit specs, visual judgment, mismatch detection, identity/style boundaries, and critique calibration.</p></div><div class="budget"><strong>~$10k</strong><span>first major target</span></div></article>
+          <article class="panel road"><div><div class="kicker">Funding target</div><h3>Speed/Routing</h3><p>Name this “Speed/Routing” to support compact runtime cards, effort-setting tests, context routing, and faster AEGIS behavior without losing discipline.</p></div><div class="budget"><strong>~$10k</strong><span>latency + cost work</span></div></article>
+          <article class="panel road"><div><div class="kicker">Funding target</div><h3>Backend Safety</h3><p>Name this “Backend Safety” to support manual-mode boundaries, approval gates, action/result schemas, logs, replay tests, and safer paths toward future API automation.</p></div><div class="budget"><strong>~$10k–$15k</strong><span>runtime foundation</span></div></article>
+          <article class="panel road"><div><div class="kicker">Funding target</div><h3>Benchmarks</h3><p>Name this “Benchmarks” to support testing across documents, PDFs, spreadsheets, plans, specs, critique, research framing, strict-output tasks, and reliable file delivery.</p></div><div class="budget"><strong>~$15k–$25k</strong><span>ordinary-user lift</span></div></article>
+          <article class="panel road"><div><div class="kicker">Research branch</div><h3>Deployment/Embodiment</h3><p>Name this “Deployment” or “Embodiment” to support controlled deployment research, simulated agent/device workflows, runtime safety patterns, and backend-dependent approval-gated operation.</p></div><div class="budget"><strong>Flexible</strong><span>backend-dependent branch</span></div></article>
+          <article class="panel road"><div><div class="kicker">Experimental branch</div><h3>Game-learning Research</h3><p>Name this “Game-learning” to support optional creator-led research using games as repeatable environments for observation, rule discovery, context compression, uncertainty handling, and backend decision-making.</p></div><div class="budget"><strong>Flexible</strong><span>core fund / later support</span></div></article>
         </div>
 
         <div class="panel note-panel">Roadmap budgets are rough API/testing planning ranges. They are intended to fund evaluation and guide/runtime improvement. They are not promises of proprietary model-weight training or guaranteed capability milestones.</div>
@@ -171,5 +202,6 @@
       <div>Truth first. Useful second. Fast when it can be.</div>
     </div>
   </footer>
+  <script src="scripts/aegis-search-bridge.js"></script>
 </body>
 </html>
